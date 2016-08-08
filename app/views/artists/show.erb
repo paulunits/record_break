@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Record Break: <%= @artist.name %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<h3><%= @arsearch %></h3>
+
+<div class="container text-center">
+<p>Albums by <%= @artist.name %>:</p><br>
+<div class="artist_albums">
+    <% @albums.each do |album| %>
+     <p><%= album.title %></p>
+    <% end %>	
+</div>
+<p>Add an album for this artist.</p><br>
+<form method="post" action="/albums">
+  <label for="album_title">Title:</label>
+  <input id="album_title" name="album[title]" type="text"><br>
+  <label for="album_year">Year:</label>
+  <input id="album_year" name="album[year]" type="text"><br>
+  <label for="album_format">Format:</label>
+  <input id="album_format" name="album[format]" type="text"><br>
+  <input id="album_artist" type="hidden" name="album[artist_id]" value="<%= @artist.id %>">
+  <input type="submit" value="Submit this album!" class="button">
+</form>
+<div>
+  <a href="<%= "/" %>">Back to home.</a>
+</div>
+</html>

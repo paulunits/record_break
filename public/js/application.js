@@ -1,0 +1,53 @@
+$(document).ready(function() {
+
+  $('#ar').on("click", function(event) {
+	event.preventDefault();
+	$('#stooge1').hide();
+  $( this ).off( event );
+
+	var ajaxRequest = $.ajax ({
+      method: 'GET',
+      url: 'artists',
+      data: $(this).serialize()
+    })
+
+
+    ajaxRequest.done(function(data) {
+      $('#ardis').append(data);
+    })
+});
+ $('#al').on("click", function(event) {
+	event.preventDefault();
+	$('#stooge2').hide();
+  $( this ).off( event );
+
+	var ajaxRequest = $.ajax ({
+      method: 'GET',
+      url: 'albums',
+      data: $(this).serialize()
+    })
+
+    console.log($(this).serialize());
+
+    ajaxRequest.done(function(data) {
+      $('#aldis').append(data);
+    })
+});
+  $('#gen').on("click", function(event) {
+	event.preventDefault();
+	$('#stooge3').hide();
+  $( this ).off( event );
+
+	var ajaxRequest = $.ajax ({
+      method: 'GET',
+      url: 'genres',
+      data: $(this).serialize()
+    })
+
+    console.log($(this).serialize());
+
+    ajaxRequest.done(function(data) {
+      $('#gendis').append(data);
+    })
+});
+});

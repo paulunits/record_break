@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Record Break: <%= @album.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="container text-center">
+<p><%= @album.artist.name %></p>	
+<p><%= @album.title %></p>
+<p><%= @album.format %></p>
+<p><%= @album.year %></p>
+<br><br>
+  <form action="/albums/<%= @album.id %>", method="post">
+  <input type="hidden" name="_method" value="put">
+  <input type="hidden" name="album[user_id]" value="<%= session[:user_id] %>">
+  <input type="submit" value="Add this album to your collection.">
+</form>
+ <br>
+  <a href="<%= "/" %>">Back to home.</a>
+
+</div>
+</html>

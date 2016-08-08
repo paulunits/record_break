@@ -1,0 +1,11 @@
+<div class="newpar">
+    <ul class="artists">
+    <% @artists.each do |artist| %>
+      <ul class="artist-link">
+          <li class="artist-link"><a class="part" href="<%= "artists/#{artist.id}" %>"><%= artist.name %></a>
+          </li>
+        </ul>
+  
+    <% end %>
+</ul>
+</div>

@@ -1,0 +1,10 @@
+<div class="newpar">
+    <ul class="albums">
+    <% @albums.each do |album| %>
+      <ul class="album-link">
+          <li class="album-link"><a class="part" href="<%= "albums/#{album.id}" %>"><%= album.title %></a></li>
+        </ul>
+      </li>
+    <% end %>
+</ul>
+</div>

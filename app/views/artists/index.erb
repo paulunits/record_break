@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Record Break: Artists</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="container text-center">
+  <header class="bar">
+  <h2>Artists</h2>
+  <br>
+  </header><br><br>
+    <ul class="artists">
+    <% @artists.each do |artist| %>
+      <ul class="artist-link">
+          <li class="artist-link"><a href="<%= "artists/#{artist.id}" %>"><%= artist.name %></a></li>
+        </ul>
+      </li>
+    <% end %>
+</ul>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Record Break: User</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<div class="container text-center">
+<header class="bar">
+  <h2>Profile for <%= @user.username %></h2>
+  <br>
+</header><br>
+<p>Albums in collection:</p><br>
+<div class="user_albums">
+    <% @albums.each do |album| %>
+     <p><%= album.artist.name %></p>
+     <p><%= album.title %></p>
+     <p><%= album.format %></p>
+     <hr width="95%", align="center">
+    <% end %>
+  </div>
+ 
+<br>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Record Break: Albums</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="container text-center">
+  <header class="bar">
+  <h2>Albums</h2>
+  <br>
+  </header><br><br>
+    <ul class="albums">
+    <% @albums.each do |album| %>
+      <ul class="album-link">
+          <li class="album-link"><a href="<%= "albums/#{album.id}" %>"><%= album.title %></a></li>
+        </ul>
+      </li>
+    <% end %>
+</ul>
+</div>
+</html>

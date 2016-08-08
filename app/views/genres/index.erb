@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Record Break: Artists</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<div class="container text-center">
+  <header class="bar">
+  <h2>Genres</h2>
+  <br>
+  </header><br><br>
+    <ul class="genres">
+    <% @genres.each do |genre| %>
+      <ul class="genre-link">
+          <li class="genre-link"><a href="<%= "genres/#{genre.id}" %>"><%= genre.name %></a></li>
+        </ul>
+      </li>
+    <% end %>
+</ul>
+</div>
+</html>
