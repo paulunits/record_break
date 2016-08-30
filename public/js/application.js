@@ -1,20 +1,29 @@
 $(document).ready(function() {
 
   $('#ar').on("click", function(event) {
-	event.preventDefault();
-	$('#stooge1').hide();
-  // $( this ).off( event );
+    if( $('#stooge1').is(':visible') ) {
+	   event.preventDefault();
+	   $('#stooge1').hide();
+      // $( this ).off( event );
 
-	var ajaxRequest = $.ajax ({
+	   var ajaxRequest = $.ajax ({
       method: 'GET',
       url: 'artists',
       data: $(this).serialize()
-    })
+     })
 
 
-    ajaxRequest.done(function(data) {
-      $('#ardis').html(data);
-    })
+      ajaxRequest.done(function(data) {
+        $('#ardis').html(data);
+      })
+  }
+  else
+  {
+    event.preventDefault();
+    $('#stooge1').show();
+    $('#ardis').empty();
+
+  } 
 });
  $('#al').on("click", function(event) {
 	event.preventDefault();
