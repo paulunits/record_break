@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('#ar').on("click", function(event) {
 	event.preventDefault();
 	$('#stooge1').hide();
-  $( this ).off( event );
+  // $( this ).off( event );
 
 	var ajaxRequest = $.ajax ({
       method: 'GET',
@@ -13,13 +13,13 @@ $(document).ready(function() {
 
 
     ajaxRequest.done(function(data) {
-      $('#ardis').append(data);
+      $('#ardis').html(data);
     })
 });
  $('#al').on("click", function(event) {
 	event.preventDefault();
 	$('#stooge2').hide();
-  $( this ).off( event );
+  // $( this ).off( event );
 
 	var ajaxRequest = $.ajax ({
       method: 'GET',
@@ -30,13 +30,13 @@ $(document).ready(function() {
     console.log($(this).serialize());
 
     ajaxRequest.done(function(data) {
-      $('#aldis').append(data);
+      $('#aldis').html(data);
     })
 });
   $('#gen').on("click", function(event) {
 	event.preventDefault();
 	$('#stooge3').hide();
-  $( this ).off( event );
+  // $( this ).off( event );
 
 	var ajaxRequest = $.ajax ({
       method: 'GET',
@@ -47,7 +47,7 @@ $(document).ready(function() {
     console.log($(this).serialize());
 
     ajaxRequest.done(function(data) {
-      $('#gendis').append(data);
+      $('#gendis').html(data);
     })
 });
 });
