@@ -2,7 +2,10 @@ class User < ActiveRecord::Base
   # Remember to create a migration!
   include BCrypt 
 
-  has_many :albums
+  has_many :user_albums
+  has_many :albums, through: :user_albums
+
+  belongs_to :album
 
   
   def password
