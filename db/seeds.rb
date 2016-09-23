@@ -47,8 +47,15 @@ Album.create(title: "Love's Secret Domain", format: "CD", year: 1991)
 Album.create(title: "The Feeding Of The 5000", format: "CD", year: 1978)
 Album.create(title: "Enter The Wu-Tang (36 Chambers)", format: "CD", year: 1993)
 Album.create(title: "War Master", format: "CD", year: 1991)
-
-
+Album.create(title: "Paranoid", format: "CD", year: 1970)
+Album.create(title: "Scum", format: "CD", year: 1987)
+Album.create(title: "Dopesmoker", format: "CD", year: 2003)
+Album.create(title: "Live in Greenwich Village: The Complete Impulse Recordings", format: "2xCD", year: 1998)
+Album.create(title: "Black Woman", format: "LP", year: 1970)
+Album.create(title: "Let's Stay Together", format: "LP", year: 1972)
+Album.create(title: "They Say I'm Different", format: "CD", year: 1974)
+Album.create(title: "It's My Thing", format: "LP", year: 1969)
+Album.create(title: "Cymande", format: "LP", year: 1972)
 
 
 
