@@ -26,6 +26,7 @@ end
 get '/songs/:id' do
   @song = Song.find(params[:id])
   @so_id = @song.id
+  @album_song = Album.where(song_id: @so_id)
   @so_search = @song.search_song(@song.name)
   p @so_search
   erb :'songs/show'
